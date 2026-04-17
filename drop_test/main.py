@@ -28,8 +28,19 @@ from pathlib import Path
 
 
 def main():
-    data = Path("input.txt").read_text(encoding="utf-8")
-    print(data, end="")
+    input_file = Path("input.txt")
+    lines = input_file.read_text(encoding="utf-8").splitlines()
+    for line in lines:
+        clean_line = line.strip()
+        if not clean_line:
+            continue
+        try:
+            parts = clean_line.split(",")
+            num_devices = int(parts[0].strip())
+            height = int(parts[1].strip())
+            print(min_num_of_drops(num_devices, height))
+        except (ValueError, IndexError):
+            continue
 
 
 if __name__ == "__main__":
