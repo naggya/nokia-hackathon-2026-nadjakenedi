@@ -1,0 +1,5 @@
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Nebuchadnezzar
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Hybrid
