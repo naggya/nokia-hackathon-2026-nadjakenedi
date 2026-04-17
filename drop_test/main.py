@@ -24,14 +24,12 @@ def min_num_of_drops(number_of_devices, tower_height):
 
 
 
+from pathlib import Path
+
+
 def main():
-    input_file = Path("drop_test/input.txt")
-    lines = input_file.read_text(encoding="utf-8").splitlines()
-    for line in lines:
-        parts=line.split(",")
-        device = int(parts[0].strip())
-        height = int(parts[1].strip())
-        print(min_num_of_drops(device,height))
+    data = Path("input.txt").read_text(encoding="utf-8")
+    print(data, end="")
 
 
 if __name__ == "__main__":

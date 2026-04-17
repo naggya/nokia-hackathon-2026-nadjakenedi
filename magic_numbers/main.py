@@ -24,13 +24,12 @@ def next_magic_num(value):
     return make_palindrom(new_first_half,iseven)
 
 
+from pathlib import Path
+
+
 def main():
-    input_file = Path("magic_numbers/input.txt")
-    lines = input_file.read_text(encoding="utf-8").splitlines()
-    for line in lines:
-        num_str = line.strip()
-        if num_str and num_str.isdigit():
-            print(next_magic_num(num_str))
+    data = Path("input.txt").read_text(encoding="utf-8")
+    print(data, end="")
 
 
 if __name__ == "__main__":
